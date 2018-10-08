@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+     Assignment 2
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-grid>
+  <ion-row text-center>
+    <ion-col >
+      <h2> Enter the right Code</h2>
+     {{status}}
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col >
+      <ion-list >
+        <ion-item  >
+          Tapped: {{tappedCount}}
+        </ion-item>
+        <ion-item  >
+          Pressed: {{pressedCount}}
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  
+  <ion-row text-center>
+    <app-reset-button></app-reset-button>
+  </ion-row>
+  <ion-row no-padding>
+    <ion-col col-6 text-center  no-padding>
+      <div class="gesture divGesture" (tap)="tapEvent($event)">Tap here</div>
+    </ion-col>
+    <ion-col  col-6 text-center  no-padding>
+      <div class="gesture divGesture"  (press)="pressEvent($event)">Press here</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  
+</ion-content>
